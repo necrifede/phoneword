@@ -6,12 +6,13 @@ const initialState = {
 
 export default function result (state = initialState, action) {
   switch (action.type) {
-    case 'SOMETHING':
-      state = {...state, value: action.value}
-      break;
+    case 'UPDATE_RESULTS':
+      return {...state, list: action.list}
+    
+    case 'SELECT_RESULT':
+      return {...state, text: action.text}
   
     default:
-      break;
+      return state;
   }
-  return state;
 }
