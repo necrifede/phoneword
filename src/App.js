@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import ButtonsRow from "./components/buttons-row";
 import InputNumeric from "./components/input-numeric"
 import InputResult from "./components/input-result"
+import Words from "./components/words"
 import store from './store'
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -19,6 +20,7 @@ function App() {
         <ButtonsRow rowlabel={1} />
         <ButtonsRow rowlabel={2} />
         <ButtonsRow rowlabel={3} />
+        <Words/>
       </div>
     </Provider>
   );

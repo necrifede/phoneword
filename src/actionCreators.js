@@ -19,3 +19,10 @@ export function updateResult(value) {
     })
   }
 }
+
+export function updateResultValue(value) {
+  return {
+    type: 'SELECT_RESULT',
+    payload: value
+  }
+}
