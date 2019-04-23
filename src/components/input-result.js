@@ -1,23 +1,26 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-function InputResult () {
+function InputResult ({ selected }) {
     return (
       <div className="row top-buffer">
         <div className="col-2"/>
         <div className="col-8">
-          <input id="inputResult" className="form-control" type="text" placeholder="Result" disabled/>
+          <input id="inputResult" className="form-control" type="text" placeholder="Result" disabled value={selected}/>
         </div>
         <div className="col-2"/>
       </div>
     )
 }
 
-export default InputResult
+const mapStateToProps = state => {
+  return {
+    selected: state.result.text
+  }
+}
 
-// <div className="row top-button-buffer">
-//             <form autocomplete="off" action="/action_page.php">
-//               <div className="autocomplete">
-//                 <input id="myInput" type="text" name="myCountry" placeholder="Country"/>
-//               </div>
-//             </form>
-//           </div>
+const mapDispatchToProps = dispatch => {
+  return { }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(InputResult)
