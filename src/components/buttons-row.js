@@ -4,7 +4,7 @@ import ButtonWord from './button-word'
 class ButtonsRow extends Component{
   render () {
     return (
-      <div className="row">
+      <div className="row top-buffer">
         <div className="col-2"/>
         <div className="col-8">
           <div className="row top-button-buffer">

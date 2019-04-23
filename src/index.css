@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+.top-buffer {
+  margin-top: 10px;
+}
+
 .top-button-buffer {
   margin-bottom: 2px;
 }
@@ -26,4 +30,13 @@ code {
 
 .numberic-button {
   font-size: 1.5em
+}
+
+#numericInput {
+  font-size: 2em;
+  text-align: right;
+}
+
+#inputResult {
+  text-align: center;
 }
